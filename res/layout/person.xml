@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+>
+	<TextView
+		android:id="@+id/label_name"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="Name" />
+	<EditText
+		android:layout_height="wrap_content"
+		android:id="@+id/edit_name"
+		android:layout_width="fill_parent"
+		android:inputType="textPersonName"
+	>
+		<requestFocus></requestFocus>
+	</EditText>
+	<TextView
+		android:text="Email"
+		android:id="@+id/label_email"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+	></TextView>
+	<EditText
+		android:layout_height="wrap_content"
+		android:id="@+id/edit_email"
+		android:layout_width="fill_parent"
+		android:inputType="textEmailAddress"
+	></EditText>
+	<Button
+		android:text="Save"
+		android:id="@+id/button_save"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:onClick="onSaveClick"
+	></Button>
+</LinearLayout>
