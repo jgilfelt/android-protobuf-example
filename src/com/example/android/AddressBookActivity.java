@@ -53,6 +53,22 @@ public class AddressBookActivity extends ListActivity implements OnItemClickList
 		getListView().setOnItemClickListener(this);
 
 	}
+	
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+		// get selected person
+		Person p = addressBook.getPerson(position);
+
+		// serialize the person as a byte array and pass to our person activity
+		Intent intent = new Intent(this, PersonActivity.class);
+		Bundle b = new Bundle();
+		b.putByteArray(PersonActivity.PERSON_MSG_EXTRA, p.toByteArray());
+		b.putInt(PersonActivity.PERSON_INDEX_EXTRA, position);
+		intent.putExtras(b);
+		startActivityForResult(intent, PERSON_EDIT_CODE);
+
+	}
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -90,22 +106,6 @@ public class AddressBookActivity extends ListActivity implements OnItemClickList
 
 			}
 		}
-	}
-
-	@Override
-	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-		// get selected person
-		Person p = addressBook.getPerson(position);
-
-		// serialize the person as a byte array and pass to our person activity
-		Intent intent = new Intent(this, PersonActivity.class);
-		Bundle b = new Bundle();
-		b.putByteArray(PersonActivity.PERSON_MSG_EXTRA, p.toByteArray());
-		b.putInt(PersonActivity.PERSON_INDEX_EXTRA, position);
-		intent.putExtras(b);
-		startActivityForResult(intent, PERSON_EDIT_CODE);
-
 	}
 
 	@Override

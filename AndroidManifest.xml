@@ -13,7 +13,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.android.PersonActivity"></activity>
+        <activity android:name="com.example.android.PersonActivity"
+        	android:windowSoftInputMode="adjustPan"></activity>
 
     </application>
 </manifest>

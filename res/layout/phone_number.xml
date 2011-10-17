@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+>
+	<EditText
+		android:layout_height="wrap_content"
+		android:id="@+id/edit_number"
+		android:layout_width="fill_parent"
+		android:inputType="phone">
+		<requestFocus></requestFocus>
+	</EditText>
+	<RadioGroup
+		android:id="@+id/radioGroup_type"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		<RadioButton
+			android:text="MOBILE"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:id="@+id/radio0"
+		></RadioButton>
+		<RadioButton
+			android:text="HOME"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:id="@+id/radio1"
+			android:checked="true"
+		></RadioButton>
+		<RadioButton
+			android:text="WORK"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:id="@+id/radio2"
+		></RadioButton>
+	</RadioGroup>
+
+</LinearLayout>
